@@ -12,6 +12,6 @@ redstone.
 
 <a href="https://www.curseforge.com/minecraft/mc-mods/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_curseforge.png"/></a>
 
-<a href="https://www.curseforge.com/minecraft/mc-mods/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_modrinth.png"/></a>
+<a href="https://modrinth.com/mod/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_modrinth.png"/></a>
 
 <a href="https://github.com/Slexom/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_github.png"/></a>
