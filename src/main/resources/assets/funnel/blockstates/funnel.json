@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "funnel:block/funnel"
+        }
+    }
+}

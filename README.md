@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Funnel
 
-## Setup
+This mod add a funnel block that drop items inside it below it one by one. Can be turned off by powering it with redstone.
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+<a href="https://www.curseforge.com/minecraft/mc-mods/funnel"><img height="64" src="https://slexom.github.io/assets/images/available_on_curseforge.png"/>
