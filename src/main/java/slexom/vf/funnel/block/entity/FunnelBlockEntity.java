@@ -65,19 +65,29 @@ public class FunnelBlockEntity extends BlockEntity implements NamedScreenHandler
         return inventory;
     }
 
+    private boolean isEnabled() {
+        return this.world.getBlockState(this.pos).get(FunnelBlock.ENABLED);
+    }
+
+    private boolean haveSpace() {
+        BlockPos down = this.pos.down();
+        BlockState blockState = this.world.getBlockState(down);
+        Block block = blockState.getBlock();
+        return block.getDefaultState().isAir() || blockState.getCollisionShape(world, down).isEmpty();
+
+    }
+
+    private boolean haveItems() {
+        return !this.inventory.get(0).isEmpty();
+    }
+
     private boolean canDropItem() {
-        if (world != null && world.getBlockState(this.pos).get(FunnelBlock.ENABLED)) {
-            BlockPos down = this.pos.down();
-            BlockState state = world.getBlockState(down);
-            Block block = state.getBlock();
-            return block.getDefaultState().isAir() || state.getCollisionShape(world, down).isEmpty() && !this.inventory.get(0).isEmpty();
-        }
-        return false;
+        return this.haveItems() && this.isEnabled() && this.haveSpace();
     }
 
     @Override
     public void tick() {
-        if (this.world != null && !this.world.isClient) {
+        if (this.world != null && !this.world.isClient()) {
             --this.cooldown;
             if (this.cooldown == 0) {
                 this.cooldown = 8;
