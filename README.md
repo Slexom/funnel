@@ -10,8 +10,8 @@
 This mod add a funnel block that drop items inside it below it one by one. Can be turned off by powering it with
 redstone.
 
-<a href="https://www.curseforge.com/minecraft/mc-mods/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_curseforge.png"/></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_curseforge.svg"/></a>
 
-<a href="https://modrinth.com/mod/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_modrinth.png"/></a>
+<a href="https://modrinth.com/mod/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_modrinth.svg"/></a>
 
-<a href="https://github.com/Slexom/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_github.png"/></a>
+<a href="https://github.com/Slexom/funnel"><img height="48" src="https://slexom.github.io/assets/images/available_on_github.svg"/></a>
