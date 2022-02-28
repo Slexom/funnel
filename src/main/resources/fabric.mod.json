@@ -1,36 +1,36 @@
 {
-    "schemaVersion": 1,
-    "id": "funnel",
-    "version": "${version}",
-    "name": "Funnel",
-    "description": "A funnel that drop items below it.",
-    "authors": [
-        "Slexom"
+  "schemaVersion": 1,
+  "id": "funnel",
+  "version": "${version}",
+  "name": "Funnel",
+  "description": "A funnel that drop items below it.",
+  "authors": [
+    "Slexom"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Slexom/funnel",
+    "sources": "https://github.com/Slexom/funnel"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/funnel/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "slexom.vf.funnel.FunnelMod"
     ],
-    "contact": {
-        "homepage": "https://github.com/Slexom/funnel",
-        "sources": "https://github.com/Slexom/funnel"
-    },
-    "license": "CC0-1.0",
-    "icon": "assets/funnel/icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "slexom.vf.funnel.FunnelMod"
-        ],
-        "client": [
-            "slexom.vf.funnel.FunnelClientMod"
-        ]
-    },
-    "mixins": [
-        "funnel.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.7.4",
-        "fabric": "*",
-        "minecraft": "1.16.x"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+    "client": [
+      "slexom.vf.funnel.FunnelClientMod"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+  },
+  "accessWidener": "funnel.accesswidener"
 }

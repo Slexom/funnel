@@ -1,8 +1,7 @@
 package slexom.vf.funnel.block;
 
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.Hopper;
+import net.minecraft.block.entity.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -21,6 +20,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import slexom.vf.funnel.FunnelMod;
 import slexom.vf.funnel.block.entity.FunnelBlockEntity;
 
 public class FunnelBlock extends BlockWithEntity {
@@ -51,8 +51,8 @@ public class FunnelBlock extends BlockWithEntity {
 
     @Nullable
     @Override
-    public BlockEntity createBlockEntity(BlockView world) {
-        return new FunnelBlockEntity();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new FunnelBlockEntity(pos, state);
     }
 
     @Override
@@ -127,6 +127,11 @@ public class FunnelBlock extends BlockWithEntity {
     @SuppressWarnings("deprecation")
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
+    }
+
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return world.isClient ? null : checkType(type, FunnelMod.FUNNEL_BLOCK_ENTITY, FunnelBlockEntity::serverTick);
     }
 
 }

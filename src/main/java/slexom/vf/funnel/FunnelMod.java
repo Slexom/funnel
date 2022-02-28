@@ -13,9 +13,8 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import net.minecraft.util.registry.Registry;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraft.util.registry.Registry;import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import slexom.vf.funnel.block.FunnelBlock;
 import slexom.vf.funnel.block.entity.FunnelBlockEntity;
 import slexom.vf.funnel.screen.FunnelScreenHandler;
@@ -23,7 +22,7 @@ import slexom.vf.funnel.screen.FunnelScreenHandler;
 public class FunnelMod implements ModInitializer {
 
 	public static final String MOD_ID = "funnel";
-	public static final Logger LOGGER = LogManager.getLogger("Funnel");
+	public static final Logger LOGGER = LoggerFactory.getLogger("Funnel");
 
 	public final Identifier REGISTRY_NAME = new Identifier(FunnelMod.MOD_ID, "funnel");
 	public static Block FUNNEL_BLOCK;
@@ -37,7 +36,7 @@ public class FunnelMod implements ModInitializer {
 		FUNNEL_BLOCK = Registry.register(Registry.BLOCK, REGISTRY_NAME, new FunnelBlock(AbstractBlock.Settings.of(Material.METAL).sounds(BlockSoundGroup.METAL).strength(0.2F).nonOpaque()));
 		FUNNEL_BLOCK_ITEM = Registry.register(Registry.ITEM, REGISTRY_NAME, new BlockItem(FUNNEL_BLOCK, new FabricItemSettings().group(ItemGroup.MISC)));
 		FUNNEL_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, REGISTRY_NAME, BlockEntityType.Builder.create(FunnelBlockEntity::new, FUNNEL_BLOCK).build(null));
-		LOGGER.info("[Animal Feeding Trough] Load Complete! Enjoy :D");
+		LOGGER.info("[Funnel] Load Complete! Enjoy :D");
 	}
 
 }
